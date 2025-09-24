@@ -42,7 +42,7 @@ Sistema web moderno para gestão de matrículas de creche-escola pública, desen
 
 ### 1. Clone o repositório
 ```bash
-git clone https://github.com/seu-usuario/creche-escola.git
+git clone https://github.com/Rhazek/creche-escola.git
 cd creche-escola
 ```
 
@@ -136,9 +136,7 @@ Isso garante que o sistema funcione mesmo sem configuração do Firebase.
 
 ## 🎯 Funcionalidades Futuras
 
-- [ ] Painel administrativo para aprovação de matrículas
 - [ ] Sistema de relatórios e estatísticas
-- [ ] Notificações por email
 - [ ] Upload de documentos
 - [ ] Sistema de fila de espera
 - [ ] Integração com sistemas governamentais
@@ -155,24 +153,6 @@ Isso garante que o sistema funcione mesmo sem configuração do Firebase.
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## 👥 Autores
-
-- **Seu Nome** - *Desenvolvimento inicial* - [seu-github](https://github.com/seu-usuario)
-
-## 📞 Suporte
-
-Se você encontrar algum problema ou tiver dúvidas:
-
-1. Verifique as [Issues](https://github.com/seu-usuario/creche-escola/issues) existentes
-2. Crie uma nova issue com detalhes do problema
-3. Entre em contato: seu-email@exemplo.com
-
-## 🙏 Agradecimentos
-
-- [Next.js](https://nextjs.org/) - Framework React
-- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS
-- [Firebase](https://firebase.google.com/) - Backend as a Service
-- [Docker](https://www.docker.com/) - Containerização
 
 ---
 
