@@ -43,6 +43,9 @@ Sistema completo de gestão para creche pública desenvolvido com Next.js 14, Fi
 
 ## 🖼️ Screenshots
 
+### Dashboard
+⚒️Em desenvolvimento⚒️
+
 ### Página de Login
 <img width="1898" height="911" alt="image" src="https://github.com/user-attachments/assets/33cc3ac5-f0fb-4aee-9e90-a6e4f847fd5e" />
 
@@ -75,11 +78,18 @@ Sistema completo de gestão para creche pública desenvolvido com Next.js 14, Fi
 <img width="1896" height="912" alt="image" src="https://github.com/user-attachments/assets/8eded08c-1f85-4f08-aa77-ab15688b02b1" />
 <img width="1898" height="913" alt="image" src="https://github.com/user-attachments/assets/f035e191-c206-4328-b627-c265ac4c0d4b" />
 
+### Rematrículas
+⚒️Em desenvolvimento⚒
+
 ### Usuários
 <img width="1896" height="906" alt="image" src="https://github.com/user-attachments/assets/bf3e866b-88dc-4b42-8bdf-cb6fc814147b" />
 <img width="1895" height="912" alt="image" src="https://github.com/user-attachments/assets/77d4b438-9e2a-44b9-b25b-fc98af39634e" />
+
 #### Usuário aguardando aprovação
 <img width="1893" height="912" alt="image" src="https://github.com/user-attachments/assets/fa166d73-4245-4f82-88d5-ffe27928bf83" />
+
+### Relatórios
+⚒️Em desenvolvimento⚒
 
 
 ## 🛠️ Instalação
