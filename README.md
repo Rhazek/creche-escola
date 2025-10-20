@@ -1,179 +1,121 @@
-# 🏫 Sistema de Gestão de Matrículas - Creche-Escola
+# 🎓 Creche Estrela do Oriente - Sistema de Gestão
 
-Sistema web moderno para gestão de matrículas de creche-escola pública, desenvolvido com Next.js, TypeScript, Tailwind CSS e Firebase.
+Sistema completo de gestão para creche pública desenvolvido com Next.js 14, Firebase e TailwindCSS.
 
-## 🚀 Funcionalidades
+## 🚀 Tecnologias
 
-### ✅ Sistema de Autenticação
-- **Login/Cadastro** com Firebase Authentication
-- **Proteção de rotas** com AuthGuard
-- **Dashboard** para usuários autenticados
+- **Next.js 14** (App Router)
+- **TypeScript**
+- **Firebase** (Authentication, Firestore, Storage)
+- **TailwindCSS**
+- **React Hook Form** + **Zod**
+- **Lucide React** (Ícones)
 
-### 📝 Cadastro de Matrículas
-- **Formulário completo** com validação em tempo real
-- **Dados do aluno**: Nome, data de nascimento, CPF, RG
-- **Dados do responsável**: Nome, parentesco, contato
-- **Endereço completo**: Logradouro, bairro, cidade, CEP
-- **Dados socioeconômicos**: Raça/cor, faixa de renda, situação habitacional
-- **Informações de deficiência**: Se possui e tipo (se aplicável)
-- **Validações inteligentes**: CPF, email, idade (0-6 anos)
+## 📋 Funcionalidades
 
-### 🎨 Interface Moderna
-- **Design responsivo** com Tailwind CSS
-- **Formulários estilizados** com feedback visual
-- **Navegação intuitiva** e acessível
-- **Mensagens de sucesso/erro** claras
+### 🔐 Autenticação e Autorização
+- Sistema de login e cadastro
+- Aprovação de usuários por administradores
+- Controle de acesso baseado em perfis (Funcionário/Administrador)
 
-### 🔧 Tecnologias Utilizadas
+### 📝 Módulos Principais
 
-- **Frontend**: Next.js 14, React 18, TypeScript
-- **Styling**: Tailwind CSS
-- **Backend**: Firebase (Authentication + Firestore)
-- **Containerização**: Docker + Docker Compose
-- **Validação**: Algoritmos customizados (CPF, email, etc.)
+#### 1. **Pré-Matrículas**
+- Cadastro de solicitações de pré-matrícula
+- Dashboard com estatísticas (Em Análise, Aprovadas, Rejeitadas)
+- Aprovação/Rejeição de solicitações
+- Filtros avançados
 
-## 📋 Pré-requisitos
+#### 2. **Matrículas**
+- Listagem de matrículas (Pendentes, Confirmadas, Canceladas)
+- Integração automática com pré-matrículas aprovadas
+- Formulário completo de matrícula em 7 etapas
+- Gestão de responsáveis, endereço, documentos, composição familiar
 
-- Node.js 18+ 
-- Docker e Docker Compose
-- Conta no Firebase (opcional - sistema funciona com fallback local)
+#### 3. **Usuários**
+- Gerenciamento de usuários do sistema
+- Aprovação de novos cadastros
+- Edição de permissões
 
-## 🛠️ Instalação e Configuração
+#### 4. **Relatórios**
+- Dashboard com estatísticas gerais
+- Visualização de dados consolidados
 
-### 1. Clone o repositório
+## 🛠️ Instalação
+
+1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/creche-escola.git
+git clone <repository-url>
 cd creche-escola
 ```
 
-### 2. Instale as dependências
+2. Instale as dependências:
 ```bash
 npm install
 ```
 
-### 3. Configure o Firebase (Opcional)
-1. Crie um projeto no [Firebase Console](https://console.firebase.google.com)
-2. Habilite Authentication e Firestore Database
-3. Copie as credenciais para `src/lib/firebase.ts`
-4. Configure as regras do Firestore usando o arquivo `firestore.rules`
-
-### 4. Execute com Docker
+3. Configure as variáveis de ambiente:
 ```bash
-# Construir e executar
-docker-compose up --build
-
-# Ou executar em background
-docker-compose up --build -d
+# Crie um arquivo .env.local com as configurações do Firebase
+NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
 ```
 
-### 5. Acesse a aplicação
-- **URL**: http://localhost:3000
-- **Matrículas**: http://localhost:3000/matriculas
-
-## 🐳 Docker
-
-O projeto está completamente containerizado:
-
+4. Execute o projeto:
 ```bash
-# Construir imagem
-docker-compose build
-
-# Executar container
-docker-compose up
-
-# Parar container
-docker-compose down
-
-# Ver logs
-docker-compose logs -f
+npm run dev
 ```
 
-## 📁 Estrutura do Projeto
+Acesse: http://localhost:3000
+
+## 🔥 Firebase Setup
+
+### Firestore Rules
+As regras de segurança estão configuradas em `firestore.rules`. Atualize-as no Firebase Console.
+
+### Storage Rules
+As regras de storage estão em `storage.rules`. Configure-as no Firebase Console.
+
+## 📦 Estrutura do Projeto
 
 ```
-creche-escola/
-├── src/
-│   ├── app/                    # Páginas do Next.js
-│   │   ├── dashboard/          # Dashboard do usuário
-│   │   ├── login/              # Página de login
-│   │   ├── signup/             # Página de cadastro
-│   │   ├── matriculas/         # Página de matrículas
-│   │   └── layout.tsx          # Layout principal
-│   ├── components/             # Componentes React
-│   │   ├── AuthForm.tsx        # Formulário de autenticação
-│   │   ├── AuthGuard.tsx       # Proteção de rotas
-│   │   ├── EnrollmentForm.tsx  # Formulário de matrícula
-│   │   └── Navbar.tsx          # Barra de navegação
-│   ├── hooks/                  # Custom hooks
-│   │   └── useAuth.ts          # Hook de autenticação
-│   ├── lib/                    # Configurações
-│   │   └── firebase.ts         # Configuração do Firebase
-│   └── utils/                  # Utilitários
-│       └── validation.ts       # Funções de validação
-├── docker-compose.yml          # Configuração do Docker
-├── Dockerfile                  # Imagem Docker
-├── firestore.rules            # Regras do Firestore
-└── README.md                  # Este arquivo
+src/
+├── app/                    # Páginas Next.js
+│   ├── login/             # Página de login
+│   ├── signup/            # Página de cadastro
+│   ├── dashboard/         # Dashboard principal
+│   ├── pre-matriculas/    # Módulo de pré-matrículas
+│   ├── matriculas/        # Módulo de matrículas
+│   └── aprovacao/         # Gestão de usuários
+├── components/            # Componentes React
+│   ├── EnrollmentForm/    # Formulário de matrícula
+│   ├── layout/            # Layout e Sidebar
+│   └── ui/                # Componentes UI reutilizáveis
+├── lib/                   # Serviços e utilitários
+│   ├── firebase.ts        # Configuração Firebase
+│   ├── enrollment-service.ts
+│   └── pre-enrollment-service.ts
+└── hooks/                 # Custom hooks
 ```
 
-## 🔐 Sistema de Fallback
+## 🎨 Identidade Visual
 
-O sistema possui um mecanismo inteligente de fallback:
-
-1. **Primeira tentativa**: Salva no Firebase Firestore
-2. **Se falhar**: Salva localmente no navegador (localStorage)
-3. **Feedback**: Informa ao usuário onde os dados foram salvos
-
-Isso garante que o sistema funcione mesmo sem configuração do Firebase.
-
-## 🧪 Validações Implementadas
-
-- **CPF**: Algoritmo completo de validação
-- **Email**: Validação de formato
-- **Idade**: Verificação de 0-6 anos para creche
-- **Formatação automática**: CPF, telefone, CEP
-- **Campos obrigatórios**: Validação em tempo real
-
-## 🎯 Funcionalidades Futuras
-
-- [ ] Painel administrativo para aprovação de matrículas
-- [ ] Sistema de relatórios e estatísticas
-- [ ] Notificações por email
-- [ ] Upload de documentos
-- [ ] Sistema de fila de espera
-- [ ] Integração com sistemas governamentais
-
-## 🤝 Contribuição
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+- **Nome:** Creche Estrela do Oriente
+- **Cor Principal:** Verde #0d833a
+- **Logo:** Estrela amarela com rosto feliz
 
 ## 📝 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
-## 👥 Autores
+## 👥 Contribuição
 
-- **Seu Nome** - *Desenvolvimento inicial* - [seu-github](https://github.com/seu-usuario)
-
-## 📞 Suporte
-
-Se você encontrar algum problema ou tiver dúvidas:
-
-1. Verifique as [Issues](https://github.com/seu-usuario/creche-escola/issues) existentes
-2. Crie uma nova issue com detalhes do problema
-3. Entre em contato: seu-email@exemplo.com
-
-## 🙏 Agradecimentos
-
-- [Next.js](https://nextjs.org/) - Framework React
-- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS
-- [Firebase](https://firebase.google.com/) - Backend as a Service
-- [Docker](https://www.docker.com/) - Containerização
+Contribuições são bem-vindas! Por favor, abra uma issue ou pull request.
 
 ---
 
-⭐ **Se este projeto foi útil para você, considere dar uma estrela!**
+Desenvolvido com ❤️ para a Creche Estrela do Oriente

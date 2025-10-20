@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useRouter } from 'next/navigation';
+import { LogoWithText } from '@/components/Logo';
 
 interface AuthFormProps {
   mode: 'login' | 'signup';
@@ -37,6 +38,9 @@ export default function AuthForm({ mode }: AuthFormProps) {
 
   return (
     <div className="bg-white p-8 rounded-lg shadow-md">
+      <div className="flex justify-center mb-6">
+        <LogoWithText size="md" />
+      </div>
       <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
         {mode === 'login' ? 'Entrar' : 'Cadastrar'}
       </h2>

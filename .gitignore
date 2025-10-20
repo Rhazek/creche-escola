@@ -15,6 +15,7 @@ build/
 .env.development.local
 .env.test.local
 .env.production.local
+.env*.local
 
 # IDE
 .vscode/
@@ -64,3 +65,21 @@ firestore-debug.log
 
 # Local development
 .local
+
+# Arquivos temporários e de debug
+*.md
+!README.md
+
+# Arquivos de teste
+*.test.*
+*.spec.*
+__tests__/
+test/
+
+# Arquivos de backup
+*.bak
+*.backup
+*~
+
+# Arquivos de sistema
+desktop.ini

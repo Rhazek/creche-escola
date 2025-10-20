@@ -239,7 +239,7 @@ export default function EnrollmentForm() {
         <p className="text-gray-600 mb-6">
           {savedLocally 
             ? "A matrícula foi salva localmente. Os dados serão sincronizados quando a conexão com o servidor for restabelecida."
-            : "A matrícula foi registrada e está em análise. Você receberá um retorno em breve."
+            : "A matrícula foi registrada com sucesso no sistema."
           }
         </p>
         <button
