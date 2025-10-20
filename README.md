@@ -41,6 +41,47 @@ Sistema completo de gestão para creche pública desenvolvido com Next.js 14, Fi
 - Dashboard com estatísticas gerais
 - Visualização de dados consolidados
 
+## 🖼️ Screenshots
+
+### Página de Login
+<img width="1898" height="911" alt="image" src="https://github.com/user-attachments/assets/33cc3ac5-f0fb-4aee-9e90-a6e4f847fd5e" />
+
+### Página de Cadastro
+<img width="1896" height="909" alt="image" src="https://github.com/user-attachments/assets/a5a78304-2e23-4cad-a787-fc3888479ed4" />
+
+### Pré-Matrículas - Listagem
+<img width="1900" height="910" alt="image" src="https://github.com/user-attachments/assets/c527c164-63a7-4f2d-bd29-5bed1fc13643" />
+<img width="1734" height="876" alt="image" src="https://github.com/user-attachments/assets/18c96cc2-60f8-444c-aaf6-8441c29aab7f" />
+
+### Pré-Matrículas - Formulário
+<img width="1892" height="908" alt="image" src="https://github.com/user-attachments/assets/6970c495-41ee-49de-adee-5154e29ce3f1" />
+<img width="1891" height="907" alt="image" src="https://github.com/user-attachments/assets/1f36dcc9-7fe2-4b6f-b952-9dd9b273015d" />
+
+### Matrículas - Listagem
+<img width="1896" height="914" alt="image" src="https://github.com/user-attachments/assets/f6e2a06c-5837-4a0f-a4ac-858bae5b2b7c" />
+
+### Matrículas - Formulário
+<img width="1898" height="910" alt="image" src="https://github.com/user-attachments/assets/75091e26-8e4e-4b7b-9e5a-8ba1970d6ac5" />
+<img width="1896" height="909" alt="image" src="https://github.com/user-attachments/assets/96e6622a-dbd0-4bf1-a6d1-c686bd9aa69e" />
+<img width="1896" height="909" alt="image" src="https://github.com/user-attachments/assets/a468c9f7-d69a-4c7a-9cbc-f219faffb910" />
+<img width="1896" height="916" alt="image" src="https://github.com/user-attachments/assets/ecd3dcd2-1603-4517-b797-ef81397aac4e" />
+<img width="1887" height="908" alt="image" src="https://github.com/user-attachments/assets/29f165a1-3aad-4526-97ad-20cca5e59d38" />
+<img width="1894" height="912" alt="image" src="https://github.com/user-attachments/assets/0de8774d-3227-458f-9a64-70ff7a3f4bad" />
+<img width="1895" height="908" alt="image" src="https://github.com/user-attachments/assets/f6dadfd6-f558-42bc-ab77-31668c6bfff6" />
+<img width="1892" height="904" alt="image" src="https://github.com/user-attachments/assets/cf364be3-f250-4573-9fdd-39aaac25bcf5" />
+<img width="1893" height="908" alt="image" src="https://github.com/user-attachments/assets/6cf7b05b-57bb-438f-98e5-a8cc102fb7b6" />
+<img width="1898" height="911" alt="image" src="https://github.com/user-attachments/assets/df0436ed-e8ce-40c9-bee9-c7ec6eef784f" />
+<img width="1896" height="910" alt="image" src="https://github.com/user-attachments/assets/01d9c4b2-ad26-4213-8822-73d5f13c5a24" />
+<img width="1896" height="912" alt="image" src="https://github.com/user-attachments/assets/8eded08c-1f85-4f08-aa77-ab15688b02b1" />
+<img width="1898" height="913" alt="image" src="https://github.com/user-attachments/assets/f035e191-c206-4328-b627-c265ac4c0d4b" />
+
+### Usuários
+<img width="1896" height="906" alt="image" src="https://github.com/user-attachments/assets/bf3e866b-88dc-4b42-8bdf-cb6fc814147b" />
+<img width="1895" height="912" alt="image" src="https://github.com/user-attachments/assets/77d4b438-9e2a-44b9-b25b-fc98af39634e" />
+#### Usuário aguardando aprovação
+<img width="1893" height="912" alt="image" src="https://github.com/user-attachments/assets/fa166d73-4245-4f82-88d5-ffe27928bf83" />
+
+
 ## 🛠️ Instalação
 
 1. Clone o repositório:
